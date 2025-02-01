@@ -31,6 +31,8 @@
   },
   "dependencies": {
     "node-nats-streaming": "^0.3.2",
-    "pub": "^0.2.0"
+    "pub": "^0.2.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
   }
 }
