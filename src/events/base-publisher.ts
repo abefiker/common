@@ -2,12 +2,12 @@ import { Stan } from 'node-nats-streaming';
 import { Subjects } from './subjects';
 
 interface Event {
-  subjects: Subjects;
+  subject: Subjects;
   data: any;
 }
 
 export abstract class Publisher<T extends Event> {
-  abstract subjects: T['subjects'];
+  abstract subjects: T['subject'];
   constructor(protected client: Stan) {}
 
   publish(data: T['data']): Promise<void> {
